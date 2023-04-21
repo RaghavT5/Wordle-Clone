@@ -4,6 +4,8 @@ import Gameboard from "./components/Gameboard";
 import Keyboard from "./components/Keyboard";
 import { gameboardDefault, generateWordSet as generateWordSet } from "./Words";
 import GameOver from "./components/GameOver";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const AppContext = createContext();
 
@@ -51,7 +53,16 @@ const App = () => {
         letterPosition: 0,
       });
     } else {
-      alert("Word not in the list");
+      toast("Word not in the list", {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
 
     if (currentWord === correctWord) {
@@ -86,6 +97,7 @@ const App = () => {
 
   return (
     <div>
+      <ToastContainer className="toast" />
       <NavBar />
       <AppContext.Provider
         value={{

@@ -184,6 +184,13 @@ nav h1 {
   background-color: #528d4e;
 }
 
+.toast {
+  margin-top: 5rem;
+  font-size: 25px;
+  font-weight: bold;
+  --toastify-text-color-light: black;
+}
+
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   nav {
