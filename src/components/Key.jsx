@@ -22,7 +22,7 @@ const Key = ({ keyVal, bigKey, grayed, yellowed, greened }) => {
           ? "big"
           : grayed
           ? "grayed-letter"
-          : yellowed
+          : yellowed && !greened
           ? "yellow-letter"
           : greened
           ? "green-letter"
