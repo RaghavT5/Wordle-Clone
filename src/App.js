@@ -20,7 +20,6 @@ const App = () => {
 
   useEffect(() => {
     generateWordSet().then((words) => {
-      console.log(words);
       setWordSet(words.wordSet);
       setCorrectWord(words.todaysWord);
     });
@@ -52,7 +51,6 @@ const App = () => {
         letterPosition: 0,
       });
     } else {
-      console.log(currentWord);
       alert("Word not in the list");
     }
 
